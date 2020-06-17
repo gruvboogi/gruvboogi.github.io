@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body></body>
+    <h1>
+        Functions 개요
+    </h1>
+    Oracle Functions 는 완전 관리형, 다중 테넌트, 확장 성이 뛰어난 주문형 서비스 기능 플랫폼입니다. 엔터프라이즈급 Oracle Cloud Infrastructure 를 기반으로하며 Fn Project 오픈 소스 엔진으로 구동됩니다. 사용 오라클 기능 (때로는로 축약 기능 이 충족 비즈니스 요구에 코드를 작성에 초점을 할 때).
+
+    Oracle Functions 의 서버리스 및 탄력적 아키텍처는 수행 할 인프라 관리 또는 소프트웨어 관리가 없음을 의미합니다. 컴퓨팅 인스턴스를 프로비저닝하거나 유지 관리하지 않으며 운영 체제 소프트웨어 패치 및 업그레이드가 자동으로 적용됩니다. Oracle Functions는 단순히 앱의 가용성, 확장 성, 보안 및 모니터링을 보장합니다. Oracle Functions를 사용하면 Java, Python, Node, Go 및 Ruby로 코드를 작성할 수 있습니다 (고급 사용 사례의 경우 고유 한 Dockerfile 및 Graal VM 가져 오기). 그런 다음 코드를 배포하고 직접 호출하거나 이벤트에 대한 응답으로 코드를 실행하고 실행 중에 소비 된 리소스에 대해서만 요금을 청구 할 수 있습니다.
+
+    Oracle Functions 는 Fn Project를 기반으로 합니다. Fn Project 는 클라우드 또는 온-프레미스 어디에서나 실행할 수있는 오픈 소스 컨테이너 네이티브 서버리스 플랫폼입니다. Fn Project 는 사용하기 쉽고 확장 가능하며 성능이 뛰어납니다. Fn Project 의 오픈 소스 배포판을 다운로드하여 설치하고 로컬에서 함수를 개발 및 테스트 한 다음 동일한 툴링을 사용하여 해당 함수를 Oracle Functions에 배포 할 수 있습니다.
+
+    Console , CLI 및 REST API를 사용하여 Oracle Functions에 액세스 할 수 있습니다 . CLI를 사용하거나 서명 된 HTTP 요청을 수행하여 Oracle Functions에 배포 한 기능을 호출 할 수 있습니다 .
+
+    Oracle Functions 는 Oracle Cloud Infrastructure Identity and Access Management (IAM) 와 통합되어 기본 Oracle Cloud Infrastructure ID 기능으로 쉽게 인증 할 수 있습니다. Oracle Cloud Infrastructure Identity and Access Management 개요를 참조하십시오 .
+
+    Oracle Functions를 사용 하여 신속하게 설정하고 실행 하려면 빠른 시작 안내서를 참조하십시오 .
+
+    <h1>Oracle Cloud Infrastructure에 액세스하는 방법</h1>
+
+    콘솔 (브라우저 기반 인터페이스) 또는 REST API를 사용하여 Oracle Cloud Infrastructure에 액세스 할 수 있습니다 . 콘솔 및 API에 대한 지시 사항은 이 안내서 전체의 주제에 포함되어 있습니다. 사용 가능한 SDK 목록은 소프트웨어 개발 키트 및 명령 줄 인터페이스를 참조하십시오 .
+
+    콘솔에 액세스하려면 지원되는 브라우저를 사용해야 합니다 . 이 페이지 상단의 콘솔 링크를 사용하여 로그인 페이지로 이동할 수 있습니다. 클라우드 테넌트, 사용자 이름 및 비밀번호를 입력하라는 메시지가 표시됩니다.
+
+    나머지 API를 사용하는 방법에 대한 일반적인 내용은 REST API는 .
+
+    <h1>이벤트로 자동화 만들기</h1>
+    이벤트 유형, 규칙 및 조치를 사용하여 Oracle Cloud Infrastructure 자원의 상태 변경을 기반으로 자동화를 작성할 수 있습니다 . 자세한 정보 는 이벤트 개요를 참조하십시오 .
+    
+    다음 Oracle Functions 자원은 이벤트를 생성합니다.
+    
+    <ul>
+        <li>응용</li>
+        <li>기술</li>
+    </ul>
+    다른 서비스의 이벤트가 Oracle Functions의 함수를 호출하도록 할 수도 있습니다 . 다른 Oracle Cloud Infrastructure Services에서 Oracle 함수 호출을 참조하십시오 .
+    
+    <h1>자원 식별자</h1>
+    대부분의 Oracle Cloud Infrastructure 리소스 유형 에는 Oracle Cloud ID (OCID)라는 고유 한 Oracle 할당 식별자가 있습니다. OCID 형식 및 기타 리소스 식별 방법에 대한 자세한 내용은 리소스 식별자를 참조하십시오 .
+    
+    <h1>인증 및 권한</h1>
+    Oracle Cloud Infrastructure의 각 서비스는 모든 인터페이스 ( 콘솔 , SDK 또는 CLI 및 REST API)에 대한 인증 및 권한 부여를 위해 IAM 과 통합됩니다 .
+    
+    조직의 관리자가 그룹 을 설정해야 합니다 , 구획 및 정책 어떤 사용자가 어떤 서비스, 어떤 리소스 및 액세스 유형에 액세스 할 수 있는지 제어합니다. 예를 들어, 정책은 새 사용자 생성, 클라우드 네트워크 생성 및 관리, 인스턴스 시작, 버킷 생성, 객체 다운로드 등을 제어 할 수있는 사람을 제어합니다. 자세한 내용 은 정책 시작을 참조하십시오 . 서로 다른 서비스 각각에 대한 정책 작성에 대한 자세한 내용은 정책 참조를 참조 하십시오 .
+    
+    회사 소유 의 Oracle Cloud Infrastructure 리소스 를 사용해야하는 일반 사용자 (관리자가 아님) 인 경우 관리자에게 문의하여 사용자 ID를 설정하십시오. 관리자는 어떤 구획을 사용해야하는지 확인할 수 있습니다.
+    
+    <h1>오라클 기능 및 한계</h1>
+    테넌시에서 최대를 만들 수 있습니다.
+    <ul>
+        <li>1o 개의 응용</li>
+        <li>20 가지 기능</li>
+    </ul> 
+
+    적용 가능한 제한 목록 및 제한 증가 요청에 대한 지침 은 서비스 제한 을 참조하십시오 .
+    
+    함수 (기능의 요청 페이로드)에 보낼 수있는 최대 데이터 양은 6MB입니다. 함수가 요청에 응답하여 리턴 할 수있는 최대 데이터 양 (함수의 응답 페이로드)은 6MB입니다. 이러한 제한은 고정되어 있으며 변경할 수 없습니다.
+    
+    일부 다른 Oracle Functions 기능 및 제한도 수정되었습니다. 그러나 변경할 수있는 번호도 있습니다. Oracle 기능 기본 동작 변경을 참조하십시오 .
+    
+    <h1>필요한 IAM 서비스 정책</h1>
+    Oracle Cloud Infrastructure 를 사용하려면 정책  에 필요한 액세스 유형이 제공되어야합니다.SDK, CLI 또는 기타 도구와 함께 콘솔 또는 REST API를 사용하는지 여부에 관계없이 관리자가 작성합니다 . 작업을 수행하려고하는데 권한이 없거나 승인되지 않았다는 메시지가 표시되면 관리자에게 부여 된 액세스 유형과 구획을 확인하십시오.  당신은 일해야합니다.
+    
+    정책을 처음 사용하는 경우 정책  및  공통 정책 시작을 참조하십시오  .
+    
+    Oracle Functions 정책에 대한 자세한 정보는 다음을 참조하십시오.
+    
+    <ul>
+        <li>네트워크 및 기능 관련 리소스에 대한 액세스를 제어하는 ​​정책 만들기</li>
+        <li>기능 세부 사항</li>
+    </ul>
+    <tail></tail>
+</html>
